@@ -4,4 +4,10 @@
 <div><%= product.price %></div>
 <div><% product.weight %></div>
 <div><% product.inventory %></div>
+<div>
+<%= link_to "#{product.name}", product_path(product.name) %>
+</div>
 <% end %>
+
+
+

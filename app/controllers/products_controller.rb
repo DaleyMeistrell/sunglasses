@@ -3,6 +3,8 @@ class ProductsController < ApplicationController
 		@products = Product.all
 	end
 	def show
-		@product = Product.find(params[:id])
+		# raise params.inspect
+		#raise params[:name]
+		@product = Product.find_by(name: "#{params[:name]}")
 	end
 end

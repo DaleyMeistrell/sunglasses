@@ -1,13 +1,14 @@
 <% @products.each do |product| %>
 
-<div><%= product.name %></div>
+
+<div><%= product.name.upcase %></div>
 <div><%= product.price %></div>
 <div><% product.weight %></div>
 <div><% product.inventory %></div>
 <div>
 <%= link_to "#{"View " + product.name + " Sunglasses"}", product_path(product.name) %>
 </div>
+<br>
 <% end %>
-
 
 
